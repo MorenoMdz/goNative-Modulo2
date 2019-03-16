@@ -12,15 +12,9 @@ export default class App extends Component {
   };
 
   async componentDidMount() {
-    const username = AsyncStorage.getItem('@Githuber:username');
+    const username = AsyncStorage.getItem('test');
 
-    // let userLogged = false;
-    // if (username) {
-    //   userLogged = true;
-    // }
-    console.tron.log(username, ' <<<< User Logged?');
-
-    this.setState({ userChecked: true, userLogged: !!username }); /* WTF? */
+    await this.setState({ userChecked: true, userLogged: !!username }); /* WTF? */
   }
 
   render() {
